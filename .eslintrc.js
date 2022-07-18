@@ -273,6 +273,7 @@ module.exports = {
           `name`,
           `resolve`,
           `reject`,
+          `status`,
           `Text`,
         ],
         builtinGlobals: true,
