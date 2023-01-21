@@ -1,4 +1,4 @@
-// ESLint v8.16.0
+// ESLint v8.32.0
 module.exports = {
   env: {
     es2022: true,
@@ -105,6 +105,9 @@ module.exports = {
     "keyword-spacing":             `error`,
     "lines-around-comment":        `off`,
     "lines-between-class-members": `warn`,
+    "logical-assignment-operators": [`warn`, `always`, {
+      enforceForIfStatements: true,
+    }],
     "max-depth":                   `warn`,
     "max-len":                     [
       `warn`,
@@ -165,6 +168,7 @@ module.exports = {
       },
     ],
     "no-empty-function": `error`,
+    "no-empty-static-block": `error`,
     "no-eq-null":        `error`,
     "no-eval":           `warn`,
     "no-extend-native":  `warn`,
@@ -247,6 +251,7 @@ module.exports = {
     "no-nested-ternary":          `warn`,
     "no-new":                     `warn`,
     "no-new-func":                `warn`,
+    "no-new-native-nonconstructor": `error`,
     "no-new-object":              `warn`,
     "no-new-wrappers":            `warn`,
     "no-octal-escape":            `error`,
@@ -427,6 +432,7 @@ module.exports = {
       `warn`,
       `asc`,
       {
+        allowLineSeparatedGroups: true,
         caseSensitive: false,
         natural:       true,
       },
