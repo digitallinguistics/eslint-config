@@ -1,4 +1,4 @@
-// ESLint v8.32.0
+// ESLint v8.48.0
 module.exports = {
   env: {
     es2022: true,
@@ -102,12 +102,14 @@ module.exports = {
         mode:  `minimum`,
       },
     ],
-    "keyword-spacing":             `error`,
-    "lines-around-comment":        `off`,
-    "lines-between-class-members": `warn`,
-    "logical-assignment-operators": [`warn`, `always`, {
-      enforceForIfStatements: true,
-    }],
+    "keyword-spacing":              `error`,
+    "lines-around-comment":         `off`,
+    "lines-between-class-members":  `warn`,
+    "logical-assignment-operators": [
+      `warn`, `always`, {
+        enforceForIfStatements: true,
+      },
+    ],
     "max-depth":                   `warn`,
     "max-len":                     [
       `warn`,
@@ -167,15 +169,15 @@ module.exports = {
         allowEmptyCatch: false,
       },
     ],
-    "no-empty-function": `error`,
+    "no-empty-function":     `error`,
     "no-empty-static-block": `error`,
-    "no-eq-null":        `error`,
-    "no-eval":           `warn`,
-    "no-extend-native":  `warn`,
-    "no-extra-bind":     `warn`,
-    "no-extra-label":    `warn`,
-    "no-extra-parens":   `warn`,
-    "no-fallthrough":    [
+    "no-eq-null":            `error`,
+    "no-eval":               `warn`,
+    "no-extend-native":      `warn`,
+    "no-extra-bind":         `warn`,
+    "no-extra-label":        `warn`,
+    "no-extra-parens":       [`warn`, `all`, { ternaryOperandBinaryExpressions: false }],
+    "no-fallthrough":        [
       `error`,
       {
         commentPattern: `/falls?\\s?through/i`,
@@ -245,20 +247,20 @@ module.exports = {
         ignoreEOLComments: true,
       },
     ],
-    "no-multi-str":               `error`,
-    "no-multiple-empty-lines":    `warn`,
-    "no-negated-condition":       `warn`,
-    "no-nested-ternary":          `warn`,
-    "no-new":                     `warn`,
-    "no-new-func":                `warn`,
+    "no-multi-str":                 `error`,
+    "no-multiple-empty-lines":      `warn`,
+    "no-negated-condition":         `warn`,
+    "no-nested-ternary":            `warn`,
+    "no-new":                       `warn`,
+    "no-new-func":                  `warn`,
     "no-new-native-nonconstructor": `error`,
-    "no-new-object":              `warn`,
-    "no-new-wrappers":            `warn`,
-    "no-octal-escape":            `error`,
-    "no-param-reassign":          `warn`,
-    "no-promise-executor-return": `warn`,
-    "no-proto":                   `error`,
-    "no-return-assign":           [
+    "no-new-object":                `warn`,
+    "no-new-wrappers":              `warn`,
+    "no-octal-escape":              `error`,
+    "no-param-reassign":            `warn`,
+    "no-promise-executor-return":   `warn`,
+    "no-proto":                     `error`,
+    "no-return-assign":             [
       `warn`,
       `always`,
     ],
@@ -433,8 +435,8 @@ module.exports = {
       `asc`,
       {
         allowLineSeparatedGroups: true,
-        caseSensitive: false,
-        natural:       true,
+        caseSensitive:            false,
+        natural:                  true,
       },
     ],
     "sort-vars":                   `warn`,
