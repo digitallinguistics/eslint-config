@@ -17,6 +17,6 @@
     "registry": "https://npm.pkg.github.com"
   },
   "peerDependencies": {
-    "eslint": "^8.48.0"
+    "eslint": ">=9.0.0"
   }
 }
