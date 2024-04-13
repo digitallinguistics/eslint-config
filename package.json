@@ -16,7 +16,13 @@
     "access": "public",
     "registry": "https://npm.pkg.github.com"
   },
+  "type": "module",
   "peerDependencies": {
+    "@eslint/js": "^9.0.0",
     "eslint": ">=9.0.0"
+  },
+  "dependencies": {
+    "@stylistic/eslint-plugin-js": "^1.7.0",
+    "globals": "^15.0.0"
   }
 }
