@@ -4,17 +4,6 @@ import js from '@eslint/js'
 export default [
 js.configs.recommended,
 {
-  name: `dlx-config`,
-  languageOptions: {
-    parserOptions: {
-      ecmaFeatures: {
-        impliedStrict: true,
-      },
-    },
-  },
-  linterOptions: {
-    reportUnusedDisableDirectives: true,
-  },
   rules:                         {
     "array-bracket-newline": [
       `warn`,
@@ -28,14 +17,6 @@ js.configs.recommended,
       `as-needed`,
     ],
     "arrow-spacing":    `error`,
-    "block-spacing":    `error`,
-    "brace-style":      [
-      `warn`,
-      `1tbs`,
-      {
-        allowSingleLine: true,
-      },
-    ],
     "comma-dangle":           [
       `error`,
       `always-multiline`,
@@ -52,14 +33,6 @@ js.configs.recommended,
     "function-paren-newline": `error`,
     "generator-star-spacing": `error`,
     "implicit-arrow-linebreak": `error`,
-    indent:                     [
-      `error`,
-      2,
-      {
-        MemberExpression: 0,
-        SwitchCase:       2,
-      },
-    ],
     "key-spacing": [
       `error`,
       {
@@ -119,21 +92,6 @@ js.configs.recommended,
     "no-return-await": `warn`,
     "no-tabs":                     `warn`,
     "no-trailing-spaces":          `off`,
-    "no-unneeded-ternary":          [
-      `error`,
-      {
-        defaultAssignment: false,
-      },
-    ],
-    "no-unused-expressions":           `error`,
-    "no-useless-call":                  `error`,
-    "no-useless-computed-key":          `warn`,
-    "no-useless-concat":                `warn`,
-    "no-useless-constructor":           `warn`,
-    "no-useless-rename":                `warn`,
-    "no-useless-return":                `warn`,
-    "no-var":                           `warn`,
-    "no-warning-comments":              `warn`,
     "no-whitespace-before-property":    `error`,
     "nonblock-statement-body-position": `error`,
     "object-curly-newline":             [
@@ -161,13 +119,7 @@ js.configs.recommended,
         allowMultiplePropertiesPerLine: true,
       },
     ],
-    "object-shorthand": `warn`,
-    "one-var":          [
-      `error`,
-      `never`,
-    ],
-    "operator-assignment": `error`,
-    "operator-linebreak":  [
+      "operator-linebreak":  [
       `error`,
       `before`,
       {
@@ -177,67 +129,8 @@ js.configs.recommended,
         },
       },
     ],
-    "prefer-arrow-callback": [
-      `error`,
-      {
-        allowNamedFunctions: true,
-      },
-    ],
-    "prefer-const":                   `error`,
-    "prefer-destructuring":           `warn`,
-    "prefer-exponentiation-operator": `warn`,
-    "prefer-named-capture-group":     `warn`,
-    "prefer-numeric-literals":        `warn`,
-    "prefer-object-has-own":          `warn`,
-    "prefer-promise-reject-errors":   `warn`,
-    "prefer-rest-params":             `warn`,
-    "prefer-spread":                  `warn`,
-    "prefer-template":                `warn`,
-    "quote-props":                    [
-      `warn`,
-      `as-needed`,
-    ],
-    quotes: [
-      `error`,
-      `backtick`,
-      {
-        allowTemplateLiterals: true,
-        avoidEscape:           true,
-      },
-    ],
     "require-atomic-updates": `warn`,
-    "require-await":          `warn`,
-    "require-unicode-regexp": `warn`,
     "rest-spread-spacing":    `error`,
-    semi:                     [
-      `error`,
-      `never`,
-    ],
-    "semi-spacing": `error`,
-    "semi-style":   `error`,
-    "sort-imports": [
-      `warn`,
-      {
-        allowSeparatedGroups:  true,
-        ignoreCase:            true,
-        memberSyntaxSortOrder: [
-          `none`,
-          `all`,
-          `single`,
-          `multiple`,
-        ],
-      },
-    ],
-    "sort-keys": [
-      `warn`,
-      `asc`,
-      {
-        allowLineSeparatedGroups: true,
-        caseSensitive:            false,
-        natural:                  true,
-      },
-    ],
-    "sort-vars":                   `warn`,
     "space-before-blocks":         `error`,
     "space-before-function-paren": [
       `error`,
@@ -257,22 +150,12 @@ js.configs.recommended,
       },
     ],
     "switch-colon-spacing":   `error`,
-    "symbol-description":     `error`,
     "template-curly-spacing": [
       `warn`,
       `always`,
     ],
     "template-tag-spacing": `error`,
-    "unicode-bom":          `error`,
-    "vars-on-top":          `warn`,
     "yield-star-spacing":   `error`,
-    yoda:                   [
-      `warn`,
-      `never`,
-      {
-        exceptRange: true,
-      },
-    ],
   },
 },
 {

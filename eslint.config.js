@@ -1,19 +1,27 @@
 import globals   from 'globals'
 import js        from '@eslint/js'
+import style     from './style.js'
 import stylistic from '@stylistic/eslint-plugin-js'
 
 // ESLint v9.0.0
 export default [
   js.configs.recommended,
+  stylistic.configs.customize({
+    braceStyle: `1tbs`,
+    quotes: `backtick`,
+    jsx: false,
+  }),
+  style,
   {
     languageOptions: {
       globals: {
         ...globals.node,
       },
     },
-    plugins: {
-      '@stylistic/js': stylistic,
+    linterOptions: {
+      reportUnusedDisableDirectives: `error`,
     },
+    name: `dlx-config`,
     rules: {
 
       // Potential Problems
@@ -85,10 +93,24 @@ export default [
       'no-template-curly-in-string': `warn`,
       'no-throw-literal': `error`,
       'no-unmodified-loop-condition': `warn`,
+      'no-unneeded-ternary': `error`,
       'no-unreachable-loop': `error`,
+      'no-unused-expressions': `error`,
       'no-use-before-define': `warn`,
       'no-useless-assignment': `warn`,
+      'no-useless-call': `error`,
+      'no-useless-computed-key': `error`,
+      'no-useless-concat': `warn`,
+      'no-useless-constructor': `warn`,
+      'no-useless-rename': `error`,
+      'no-useless-return': `error`,
+      'prefer-const': `error`,
+      'prefer-promise-reject-errors': `error`,
       'require-atomic-updates': `warn`,
+      'require-await': `error`,
+      'require-unicode-regexp': `warn`,
+      'symbol-description': `error`,
+      'unicode-bom': `error`,
 
       // Style
       'arrow-body-style': `warn`,
@@ -152,10 +174,64 @@ export default [
           ],
         },
       ],
-      semi: [`error`, `never`],
-      'semi-spacing': `error`,
-      'semi-style': `error`,
+      'no-void': `warn`,
+      'no-warning-comments': `warn`,
+      'object-shorthand': `error`,
+      'operator-assignment': `error`,
+      'prefer-arrow-callback': `error`,
+      'prefer-destructuring': `warn`,
+      'prefer-exponentiation-operator': `warn`,
+      'prefer-named-capture-group': `warn`,
+      'prefer-numeric-literals': `warn`,
+      'prefer-object-has-own': `warn`,
+      'prefer-spread': `warn`,
+      'prefer-template': `warn`,
+      'sort-imports': [
+        `warn`,
+        {
+          allowSeparatedGroups: true,
+          ignoreCase: true,
+          memberSyntaxSortOrder: [
+            `none`,
+            `all`,
+            `single`,
+            `multiple`,
+          ],
+        },
+      ],
+      'sort-keys': [
+        `warn`,
+        `asc`,
+        {
+          allowLineSeparatedGroups: true,
+          caseSensitive: false,
+          natural: true,
+        },
+      ],
+      'sort-vars': `warn`,
+      'vars-on-top': `warn`,
+      'yoda': [
+        `warn`,
+        `never`,
+        {
+          exceptRange: true,
+        },
+      ],
 
     },
   },
+  {
+    name: `dlx-test-overrides`,
+    rules: {
+      files: [`**/*.test.*`],
+      rules: {
+        "func-names": `off`,
+        "max-nested-callbacks": `off`,
+        "max-params": `off`,
+        "no-magic-numbers": `off`,
+        "no-param-reassign": `off`,
+        "prefer-arrow-callback": `off`,
+      },
+    },
+  }
 ]
