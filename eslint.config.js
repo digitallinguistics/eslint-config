@@ -1,23 +1,17 @@
-import globals   from 'globals'
-import js        from '@eslint/js'
-import style     from './style.js'
-import stylistic from '@stylistic/eslint-plugin-js'
+import js from '@eslint/js'
+import style from './style.js'
+import stylistic from '@stylistic/eslint-plugin'
 
 // ESLint v9.0.0
 export default [
   js.configs.recommended,
   stylistic.configs.customize({
     braceStyle: `1tbs`,
-    quotes: `backtick`,
     jsx: false,
+    quotes: `backtick`,
   }),
   style,
   {
-    languageOptions: {
-      globals: {
-        ...globals.node,
-      },
-    },
     linterOptions: {
       reportUnusedDisableDirectives: `error`,
     },
@@ -31,7 +25,7 @@ export default [
       'default-case': `warn`,
       'default-case-last': `warn`,
       'default-param-last': `warn`,
-      eqeqeq: `warn`,
+      "eqeqeq": `warn`,
       'func-name-matching': `error`,
       'func-names': [`warn`, `as-needed`],
       'no-bitwise': `warn`,
@@ -115,7 +109,7 @@ export default [
       // Style
       'arrow-body-style': `warn`,
       'camelcase': `warn`,
-      curly: [`error`, `multi-line`, `consistent`],
+      "curly": [`error`, `multi-line`, `consistent`],
       'dot-notation': `error`,
       'grouped-accessor-pairs': [`warn`, `getBeforeSet`],
       'logical-assignment-operators': [`warn`, `always`, { enforceForIfStatements: true }],
@@ -221,17 +215,15 @@ export default [
     },
   },
   {
+    files: [`**/*.test.*`],
     name: `dlx-test-overrides`,
     rules: {
-      files: [`**/*.test.*`],
-      rules: {
-        "func-names": `off`,
-        "max-nested-callbacks": `off`,
-        "max-params": `off`,
-        "no-magic-numbers": `off`,
-        "no-param-reassign": `off`,
-        "prefer-arrow-callback": `off`,
-      },
+      "func-names": `off`,
+      "max-nested-callbacks": `off`,
+      "max-params": `off`,
+      "no-magic-numbers": `off`,
+      "no-param-reassign": `off`,
+      "prefer-arrow-callback": `off`,
     },
-  }
+  },
 ]
