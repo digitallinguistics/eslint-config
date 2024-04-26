@@ -1,6 +1,6 @@
 import stylistic from '@stylistic/eslint-plugin-js'
 
-// ESLint v1.7.2
+// Stylistic v1.7.2
 export default {
   plugins: {
     '@stylistic/js': stylistic,
@@ -8,10 +8,18 @@ export default {
   rules: {
     '@stylistic/js/function-call-spacing': `error`,
     'array-bracket-newline':               [`error`, `consistent`],
+    'array-bracket-spacing':               `error`,
     'array-element-newline':               [`error`, `consistent`],
     'arrow-parens':                        [`error`, `as-needed`],
+    'arrow-spacing':                       `error`,
+    'block-spacing':                       `error`,
+    'brace-style':                         `error`,
     'comma-dangle':                        [`error`, `always-multiline`],
+    'comma-spacing':                       `error`,
+    'comma-style':                         `error`,
+    'computed-property-spacing':           `error`,
     'dot-location':                        [`error`, `property`],
+    'eol-last':                            `error`,
     'function-call-argument-newline':      [`error`, `consistent`],
     'function-paren-newline':              `error`,
     'generator-star-spacing':              `error`,
@@ -21,8 +29,41 @@ export default {
       align: `value`,
       mode:   `minimum`,
     }],
-    quotes:         [`error`, `backtick`],
-    'semi-spacing': `error`,
-    'semi-style':   `error`,
+    'keyword-spacing':             `error`,
+    'lines-between-class-members': `error`,
+    'max-statements-per-line':     `error`,
+    'multiline-ternary':           [`error`, `always-multiline`],
+    'new-parens':                  [`error`, `never`],
+    'newline-per-chained-call':    `error`,
+    'no-confusing-arrow':          `error`,
+    'no-extra-parens':             [`error`, `all`, {
+      nestedBinaryExpressions:         false,
+      ternaryOperandBinaryExpressions: false,
+    }],
+    'no-extra-semi':               `error`,
+    'no-floating-decimal':         `error`,
+    'no-mixed-operators':          `error`,
+    'no-mixed-spaces-and-tabs':    `error`,
+    'no-multi-spaces':          [`error`, {
+      exceptions: {
+        AssignmentExpression: true,
+        AssignmentPattern:    true,
+        ImportDeclaration:    true,
+        ImportSpecifier:      true,
+        VariableDeclaration:  true,
+        VariableDeclarator:   true,
+      },
+      ignoreEOLComments: true,
+    }],
+    'no-multiple-empty-lines':          `warn`,
+    'no-tabs':                          `error`,
+    'no-trailing-spaces':               `error`,
+    'no-whitespace-before-property':    `error`,
+    'nonblock-statement-body-position': `error`,
+    'object-curly-newline':             [`error`, `multiline`],
+    quotes:                             [`error`, `backtick`],
+    'semi':                             [`error`, `never`],
+    'semi-spacing':                     `error`,
+    'semi-style':                       `error`,
   },
 }
