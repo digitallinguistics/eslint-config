@@ -13,8 +13,7 @@
   },
   "homepage": "https://github.com/digitallinguistics/eslint-config",
   "publishConfig": {
-    "access": "public",
-    "registry": "https://npm.pkg.github.com"
+    "access": "public"
   },
   "type": "module",
   "peerDependencies": {
