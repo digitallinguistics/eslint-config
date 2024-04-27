@@ -1,6 +1,6 @@
 {
   "name": "@digitallinguistics/eslint-config",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "ESLint config for Digital Linguistics (DLx) projects",
   "repository": "git://github.com/digitallinguistics/eslint-config.git",
   "author": {
