@@ -1,16 +1,14 @@
-import js from '@eslint/js'
+import js    from '@eslint/js'
 import style from './style.js'
 
-// ESLint v9.0.0
+// ESLint v9.1.0
 export default [
   js.configs.recommended,
   style,
   {
-    linterOptions: {
-      reportUnusedDisableDirectives: `error`,
-    },
-    name:  `dlx-config`,
-    rules: {
+    linterOptions: { reportUnusedDisableDirectives: `error` },
+    name:          `dlx-config`,
+    rules:         {
 
       // Potential Problems
       'accessor-pairs':        `warn`,
@@ -19,7 +17,7 @@ export default [
       'default-case':          `warn`,
       'default-case-last':     `warn`,
       'default-param-last':    `warn`,
-      'eqeqeq':                `warn`,
+      eqeqeq:                  `warn`,
       'func-name-matching':    `error`,
       'func-names':            [`warn`, `as-needed`],
       'no-bitwise':            `warn`,
@@ -102,8 +100,8 @@ export default [
 
       // Style
       'arrow-body-style':             `warn`,
-      'camelcase':                    `warn`,
-      'curly':                        [`error`, `multi-line`, `consistent`],
+      camelcase:                      `warn`,
+      curly:                          [`error`, `multi-line`, `consistent`],
       'dot-notation':                 `error`,
       'grouped-accessor-pairs':       [`warn`, `getBeforeSet`],
       'logical-assignment-operators': [`warn`, `always`, { enforceForIfStatements: true }],
@@ -198,12 +196,10 @@ export default [
       ],
       'sort-vars':   `warn`,
       'vars-on-top': `warn`,
-      'yoda':        [
+      yoda:          [
         `warn`,
         `never`,
-        {
-          exceptRange: true,
-        },
+        { exceptRange: true },
       ],
 
     },

@@ -2,10 +2,8 @@ import stylistic from '@stylistic/eslint-plugin-js'
 
 // Stylistic v1.7.2
 export default {
-  plugins: {
-    '@stylistic/js': stylistic,
-  },
-  rules: {
+  plugins: { '@stylistic/js': stylistic },
+  rules:   {
     '@stylistic/js/function-call-spacing': `error`,
     'array-bracket-newline':               [`error`, `consistent`],
     'array-bracket-spacing':               `error`,
@@ -24,26 +22,23 @@ export default {
     'function-paren-newline':              `error`,
     'generator-star-spacing':              `error`,
     'implicit-arrow-linebreak':            `error`,
-    'indent':                              [`error`, 2],
-    'key-spacing':                         [`error`, {
-      align: `value`,
-      mode:   `minimum`,
-    }],
-    'keyword-spacing':             `error`,
-    'lines-between-class-members': `error`,
-    'max-statements-per-line':     `error`,
-    'multiline-ternary':           [`error`, `always-multiline`],
-    'new-parens':                  [`error`, `never`],
-    'newline-per-chained-call':    `error`,
-    'no-confusing-arrow':          `error`,
-    'no-extra-parens':             [`error`, `all`, {
+    indent:                                [`error`, 2],
+    'key-spacing':                         [`error`, { align: `value` }],
+    'keyword-spacing':                     `error`,
+    'lines-between-class-members':         `error`,
+    'max-statements-per-line':             `error`,
+    'multiline-ternary':                   [`error`, `always-multiline`],
+    'new-parens':                          [`error`, `never`],
+    'newline-per-chained-call':            `error`,
+    'no-confusing-arrow':                  `error`,
+    'no-extra-parens':                     [`error`, `all`, {
       nestedBinaryExpressions:         false,
       ternaryOperandBinaryExpressions: false,
     }],
-    'no-extra-semi':               `error`,
-    'no-floating-decimal':         `error`,
-    'no-mixed-operators':          `error`,
-    'no-mixed-spaces-and-tabs':    `error`,
+    'no-extra-semi':            `error`,
+    'no-floating-decimal':      `error`,
+    'no-mixed-operators':       `error`,
+    'no-mixed-spaces-and-tabs': `error`,
     'no-multi-spaces':          [`error`, {
       exceptions: {
         AssignmentExpression: true,
@@ -60,10 +55,38 @@ export default {
     'no-trailing-spaces':               `error`,
     'no-whitespace-before-property':    `error`,
     'nonblock-statement-body-position': `error`,
-    'object-curly-newline':             [`error`, `multiline`],
-    quotes:                             [`error`, `backtick`],
-    'semi':                             [`error`, `never`],
-    'semi-spacing':                     `error`,
-    'semi-style':                       `error`,
+    'object-curly-newline':             [`error`, { multiline: true }],
+    'object-curly-spacing':             [`error`, `always`, { objectsInObjects: true }],
+    'object-property-newline':          [`error`, { allowAllPropertiesOnSameLine: true }],
+    'one-var-declaration-per-line':     [`error`, `always`],
+    'quote-props':                      [`error`, `as-needed`, {
+      keywords:    true,
+      unnecessary: true,
+    }],
+    quotes:                        [`error`, `backtick`],
+    'rest-spread-spacing':         `error`,
+    semi:                          [`error`, `never`],
+    'semi-spacing':                `error`,
+    'semi-style':                  `error`,
+    'space-before-blocks':         `error`,
+    'space-before-function-paren': [
+      `error`,
+      {
+        anonymous: `never`,
+        named:     `never`,
+      },
+    ],
+    'space-in-parens': `error`,
+    'space-infix-ops': `error`,
+    'space-unary-ops': `error`,
+    'spaced-comment':  [
+      `error`,
+      `always`,
+      { markers: [`*`] },
+    ],
+    'switch-colon-spacing':   `error`,
+    'template-curly-spacing': [`error`, `always`],
+    'template-tag-spacing':   `error`,
+    'yield-star-spacing':     `error`,
   },
 }
