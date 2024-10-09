@@ -55,11 +55,14 @@ export default {
     'no-trailing-spaces':               `error`,
     'no-whitespace-before-property':    `error`,
     'nonblock-statement-body-position': `error`,
-    'object-curly-newline':             [`error`, { multiline: true }],
-    'object-curly-spacing':             [`error`, `always`, { objectsInObjects: true }],
-    'object-property-newline':          [`error`, { allowAllPropertiesOnSameLine: true }],
-    'one-var-declaration-per-line':     [`error`, `always`],
-    'quote-props':                      [`error`, `as-needed`, {
+    'object-curly-newline':             [`error`, {
+      consistent:    true,
+      minProperties: 4,
+    }],
+    'object-curly-spacing':         [`error`, `always`, { objectsInObjects: true }],
+    'object-property-newline':      [`error`, { allowAllPropertiesOnSameLine: true }],
+    'one-var-declaration-per-line': [`error`, `always`],
+    'quote-props':                  [`error`, `as-needed`, {
       keywords:    true,
       unnecessary: true,
     }],

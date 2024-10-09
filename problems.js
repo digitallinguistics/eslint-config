@@ -75,7 +75,10 @@ export default {
     'no-unneeded-ternary':          `error`,
     'no-unreachable-loop':          `error`,
     'no-unused-expressions':        `error`,
-    'no-use-before-define':         `warn`,
+    'no-use-before-define':         [`warn`, {
+      classes:   false,
+      functions: false,
+    }],
     'no-useless-assignment':        `warn`,
     'no-useless-call':              `error`,
     'no-useless-computed-key':      `error`,

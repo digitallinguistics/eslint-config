@@ -2,6 +2,13 @@
 
 ESLint config for Digital Linguistics (DLx) projects
 
+## Dependencies
+
+Rules have been updated up to the following versions (even though the peer dependencies listed are actually higher than these):
+
+- ESLint v9.1.0
+- Stylistic v1.7.2
+
 ## How to use
 
 1. Install peer dependencies: `npm i -D eslint @eslint/js @stylistic/eslint-plugin-js`.
