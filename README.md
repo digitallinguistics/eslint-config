@@ -11,8 +11,18 @@ Rules have been updated up to the following versions (even though the peer depen
 
 ## How to use
 
-1. Install peer dependencies: `npm i -D eslint @eslint/js @stylistic/eslint-plugin-js`.
-2. Install the shared DLx config: `npm install -D @digitallinguistics/eslint-config`.
+1. Install peer dependencies:
+
+```cmd
+npm i -D eslint @eslint/js @stylistic/eslint-plugin-js
+```
+
+2. Install the shared DLx config:
+
+```cmd
+npm install -D @digitallinguistics/eslint-config
+```
+
 3. Add an `eslint.config.js` file with the following content:
 
 ```js
